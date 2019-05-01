@@ -28,3 +28,13 @@ step into node and so on
 ### node install 
 - mac use brew , nvm to manage different versions of node 
 - windows  nvm-win 
+
+
+### 模块化的好处
+- 高内聚 低耦合
+- 方便维护，防止冲突
+- 模块化取代了单例模式 
+- 浏览器断的模块化 seajs CMD 、reruiresjs AMD 
+- node的commonjs实现模块化，依赖实现的是文件的读写，node自带模块
+- commonjs 导出模块，exports和module.exports 
+- 文件导出模块时，首先隐式执行 ``` module.exports = exports = this = {} ``` 所以 exports = fn 是不可以的 

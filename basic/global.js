@@ -4,9 +4,14 @@
  */
 
 
+
 /**
- * @title 以下这些属性，只在文件中，可以用
+ * @title 以下5个这些属性，只在文件中，可以用
  */
+
+// 这个arguments就是父函数的执行传参，5个参数 ，exports 默认导出空对象
+// function( exports,  require , module, __dirname, __filename)
+console.log(arguments)
 
 ///Users/zhangyuhua/Desktop/node-road
 console.log(__dirname)
