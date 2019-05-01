@@ -1,0 +1,26 @@
+{
+  "name": "node-road",
+  "version": "1.0.0",
+  "description": "step into node and so on",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huahuadavids/node-road.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huahuadavids/node-road/issues"
+  },
+  "homepage": "https://github.com/huahuadavids/node-road#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "koa": "^2.7.0",
+    "mysql": "^2.17.1",
+    "pm2": "^3.5.0"
+  }
+}
