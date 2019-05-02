@@ -1,5 +1,7 @@
 
-// {} 这个不是global
+var jdks = require("jdks")
+
+// 输出 {} 代表 exports 这个不是global
 // node自带模块化功能，一个js文件就是一个模块，模块中的this
 console.log(this)
 
@@ -16,4 +18,6 @@ function test(){
 }
 
 test()
+
+console.log(jdks.string.fmoney(1987734))
 
