@@ -15,3 +15,7 @@ const buf1 =  Buffer.from("dd")
 console.log(buf0)
 console.log(buf1)
 console.log(Buffer.concat([buf0, buf1]))
+
+// 16进制转2进制
+console.log( (0x12).toString(2))
+
