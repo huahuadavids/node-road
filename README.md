@@ -78,4 +78,11 @@ const a = ob010101  //二进制
 const b = ox010101  //16进制
 
 ```
-- 
+
+### http
+- 客户端 client request 
+- 服务端 server response 
+- 路径不同，返回结果不同，就是路由
+- 状态码 
+- 200 success 
+- 404 not found 
