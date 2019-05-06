@@ -86,3 +86,39 @@ const b = ox010101  //16进制
 - 状态码 
 - 200 success 
 - 404 not found 
+- restfully 地址一个，根据请求方法的区别。实现不同的功能 
+
+
+### redis
+- mysql 关系型数据库 表 hang 很可靠，性能不高
+- mongodb 非关系数据库 存的是集合 集合存的是文档 性能高，不可靠 
+- redis key value 数据库 性能高，也可靠 
+- mac install 
+```
+解压：tar zxvf redis-4.0.9.tar.gz
+移动到： mv redis-4.0.9 /usr/local/
+切换到：cd /usr/local/redis-4.0.9/
+编译测试 sudo make test
+编译安装 sudo make install
+
+// 或者 brew install redis
+
+// 在redis目录下建立bin，etc，db三个目录
+// 把/usr/local/redis/src目录下的mkreleasehdr.sh，redis-benchmark， redis-check-rdb， redis-cli， redis-server拷贝到bin目录
+// cp /usr/local/redis-3.2.8/redis.conf /usr/local/redis-3.2.8/etc
+
+// 启动server 
+redis-server 
+```
+- 两个用途，缓存数据库，集中会话管理
+- 高并发 nginx负载均衡  集群 redis放session 
+- 新闻页，先读mysql，读完放到redis里，后边直接从redis取数据 
+- use 
+```
+set name huahua
+get name 
+
+
+
+
+```

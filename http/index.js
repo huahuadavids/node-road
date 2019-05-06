@@ -7,6 +7,7 @@ const http = require("http");
 const path = require("path");
 const port = 8088;
 const fs = require("fs");
+const mime = require("mime");
 
 // 把路径解析成一个对象
 const url = require("url");
@@ -38,6 +39,14 @@ http.createServer((req, res) => {
 
   const {pathname, query} = routes;
   console.log(pathname)
+
+
+  if(pathname === '/time'){
+    const t =  new Date().toLocaleDateString()
+    res.end(t)
+    return;
+  }
+
   //  不加点，如/index.html 则去电脑根路径找了
   fs.stat('.'+ pathname, function (err,stat) {
     if(err) {
@@ -48,12 +57,13 @@ http.createServer((req, res) => {
 
     // 是文件
     if(stat.isFile()){
-      // 没写头
+      res.setHeader("Content-Type", mime.getType(pathname)+ ';charset=utf8')
       fs.createReadStream('.'+pathname).pipe(res)
     }
 
     // ./ 也是文件夹  拼接index.html(默认首页) 返回
     if(stat.isDirectory()){
+      res.setHeader("Content-Type", 'text/html;charset=utf8')
       const p = path.resolve('.'+pathname, './index.html')
       fs.createReadStream(p).pipe(res)
     }

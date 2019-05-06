@@ -10,5 +10,20 @@
 
 <h2>hello huahua</h2>
 
+
+<div id="time">
+
+</div>
+<script>
+ fetch("/time").then(res => {
+  return res.text()
+   // res.json()
+ }).then(res => {
+   console.log(res)
+ }).
+ catch(err => {
+   console.log(err)
+ })
+</script>
 </body>
 </html>
